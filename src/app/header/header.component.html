@@ -1,0 +1,16 @@
+<ul>
+  <li>
+    <a routerLink="books">Livres</a>
+  </li>
+</ul>
+<ul>
+  <li *ngIf="!isAuth">
+    <a routerLink="auth/signup">Créer un compte</a>
+  </li>
+  <li *ngIf="!isAuth">
+    <a routerLink="auth/signin">Connexion</a>
+  </li>
+  <li>
+    <a (click)="onSignOut()" *ngIf="isAuth">Deconnexion</a>
+  </li>
+</ul>

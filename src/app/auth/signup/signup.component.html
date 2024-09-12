@@ -1,0 +1,9 @@
+<h2>Créer un compte</h2>
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+  <label for="email">Email</label>
+  <input type="text" id="email" formControlName="email" />
+  <label for="password">Mot de passe</label>
+  <input type="text" id="password" formControlName="password" />
+  <button type="submit" [disabled]="signUpForm.invalid">Créer un compte</button>
+</form>
+<p>{{ errorMessage }}</p>

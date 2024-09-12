@@ -1,0 +1,9 @@
+<h2>Se connecter</h2>
+<form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+  <label for="email">Email</label>
+  <input type="text" id="email" formControlName="email" />
+  <label for="password">Mot de passe</label>
+  <input type="text" id="password" formControlName="password" />
+  <button type="submit" [disabled]="signInForm.invalid">Connexion</button>
+</form>
+<p>{{ errorMessage }}</p>

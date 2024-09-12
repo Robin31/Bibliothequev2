@@ -1,0 +1,11 @@
+<h2>Vos livres</h2>
+<button *ngFor="let book of books; let i = index" (click)="onViewBook(i)">
+  <h3>
+    {{ book.title }}
+    <button (click)="onDeleteBook(book)">
+      <span></span>
+    </button>
+  </h3>
+  <p>{{ book.author }}</p>
+</button>
+<button (click)="onNewBook()">Nouveau livre</button>

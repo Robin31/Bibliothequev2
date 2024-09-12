@@ -1,0 +1,11 @@
+<!-- <img *ngIf="book.photo" [src]="book.photo" /> -->
+<h1>{{ book.title }}</h1>
+<h3>{{ book.author }}</h3>
+<div class="card flex justify-content-center">
+  <p-button
+    (click)="onDeleteBook(book)"
+    routerLink="/books"
+    label="Suppression"
+  ></p-button>
+</div>
+<p-button (click)="onBack()" label="Retour"> </p-button>
